@@ -1,294 +1,250 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Foodzy — Mazalarning Xazinasi</title>
     <link rel="stylesheet" href="style.css">
-      <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-  />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
 </head>
 <body>
 
- <header class="header">
-    <!-- Top Navbar -->
-    <div class="header-top">
-      <div class="container_la top-container">
-        <div class="logo">
-          <button class="menu-btn"><i class="fa fa-bars"></i></button>
-          <img src="img/lala.png" alt="Foodzy Logo">
-          <div class="logo-text">
-            <h2>Foodzy</h2>
-            <span>A Treasure of Tastes</span>
-          </div>
+<header class="header">
+  <!-- Yuqori navbar -->
+  <div class="header-top">
+    <div class="container_la top-container">
+      <div class="logo">
+        <button class="menu-btn"><i class="fa fa-bars"></i></button>
+        <img src="img/lala.png" alt="Foodzy logotipi">
+        <div class="logo-text">
+          <h2>Foodzy</h2>
+          <span>Mazalarning xazinasi</span>
         </div>
+      </div>
 
-        <nav class="nav-links">
-          <ul>
-       <li><a href="index.html">Home</a></li>
-            <li><a href="index_2.html">Category <i class="fa fa-chevron-down"></i></a></li>
-            <li><a href="index_3.html">Products <i class="fa fa-chevron-down"></i></a></li>
-            <li><a href="index_4.html">Pages <i class="fa fa-chevron-down"></i></a></li>
-            <li><a href="#">Elements <i class="fa fa-chevron-down"></i></a></li>
-          </ul>
-        </nav>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Bosh sahifa</a></li>
+          <li><a href="index_2.html">Kategoriyalar <i class="fa fa-chevron-down"></i></a></li>
+          <li><a href="index_3.html">Mahsulotlar <i class="fa fa-chevron-down"></i></a></li>
+          <li><a href="index_4.html">Sahifalar <i class="fa fa-chevron-down"></i></a></li>
+          <li><a href="#">Elementlar <i class="fa fa-chevron-down"></i></a></li>
+        </ul>
+      </nav>
 
-        <div class="phone">
-          <i class="fa fa-phone"></i>
-          <span>+123 ( 456 ) ( 7890 )</span>
+      <div class="phone">
+        <i class="fa fa-phone"></i>
+        <span>+123 (456) (7890)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pastki header -->
+  <div class="header-bottom">
+    <div class="container bottom-container">
+      <div class="search-box">
+        <input type="text" placeholder="Mahsulotlarni qidirish...">
+        <select>
+          <option>Barcha kategoriyalar</option>
+        </select>
+        <button><i class="fa fa-search"></i></button>
+      </div>
+
+      <div class="icons">
+        <a href="#"><i class="fa fa-user"></i> Akkaunt</a>
+        <a href="#"><i class="fa fa-heart"></i> Sevimlilar</a>
+        <a href="#"><i class="fa fa-shopping-cart"></i> Savatcha</a>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Header tugadi -->
+
+<br><br><br>
+
+<!-- 2-bo‘lim: 2 ta rasm -->
+<section class="product-section">
+  <div class="container_2_alo">
+
+    <div class="category-list">
+      <div class="category active">
+        <h4>Keks va Sut</h4>
+        <p>(65 ta mahsulot)</p>
+      </div>
+      <div class="category">
+        <h4>Yangi Go‘sht</h4>
+        <p>(30 ta mahsulot)</p>
+      </div>
+      <div class="category">
+        <h4>Sabzavotlar</h4>
+        <p>(25 ta mahsulot)</p>
+      </div>
+      <div class="category">
+        <h4>Qulupnay</h4>
+        <p>(68 ta mahsulot)</p>
+      </div>
+      <div class="category">
+        <h4>Sog‘lom oziq-ovqat</h4>
+        <p>(68 ta mahsulot)</p>
+      </div>
+      <div class="category view-more">
+        <h4>Barchasini ko‘rish</h4>
+      </div>
+    </div>
+
+    <!-- Mahsulot kartalari -->
+    <div class="product-cards">
+      <div class="card">
+        <img src="img/9b87d05a18ebb4acdac09e9e45b2dbfaf71cbbc6.jpg" alt="Keks" />
+        <div class="discount">50<span>%</span> chegirma</div>
+        <div class="card-content">
+          <h3>Keks</h3>
+          <button>Hozir xarid qil</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/lar1.jpg" alt="Sut" />
+        <div class="discount">40<span>%</span> chegirma</div>
+        <div class="card-content">
+          <h3>Sut</h3>
+          <button>Hozir xarid qil</button>
         </div>
       </div>
     </div>
 
-    <!-- Bottom Header -->
-    <div class="header-bottom">
-      <div class="container bottom-container">
-        <div class="search-box">
-          <input type="text" placeholder="Search For Items...">
-          <select>
-            <option>All Categories</option>
-          </select>
-          <button><i class="fa fa-search"></i></button>
-        </div>
-
-        <div class="icons">
-          <a href="#"><i class="fa fa-user"></i> Account</a>
-          <a href="#"><i class="fa fa-heart"></i> Wishlist</a>
-          <a href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- <img class="kotta" src="img/cover.png" alt=""> -->
-  </header>
-  <!-- Header End -->
-
-    <br><br><br>
-
-
-
-    <!-- 2-section 2 image -->
-      <section class="product-section">
-    <div class="container_2_alo">
-
-
-      <div class="category-list">
-        <div class="category active">
-          <h4>Cake & Milk</h4>
-          <p>(65 items)</p>
-        </div>
-        <div class="category">
-          <h4>Fresh Meat</h4>
-          <p>(30 items)</p>
-        </div>
-        <div class="category">
-          <h4>Vegetables</h4>
-          <p>(25 items)</p>
-        </div>
-    <div class="category">
-          <h4>Strawberry</h4>
-          <p>(68 items)</p>
-        </div>
-        <div class="category">
-          <h4>Health</h4>
-          <p>(68 items)</p>
-        </div>
-        <div class="category view-more">
-          <h4>View More</h4>
-        </div>
-      </div>
-
-      <!-- RIGHT PRODUCT CARDS -->
-      <div class="product-cards">
-        <div class="card">
-          <img src="img/9b87d05a18ebb4acdac09e9e45b2dbfaf71cbbc6.jpg" alt="Cake" />
-          <div class="discount">50<span>%</span> OFF</div>
-          <div class="card-content">
-            <h3>Cake</h3>
-            <button>Shop Now</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="img/lar1.jpg" alt="Milk" />
-          <div class="discount">40<span>%</span> OFF</div>
-          <div class="card-content">
-            <h3>Milk</h3>
-            <button>Shop Now</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-
-
-
-
-
-<!-- 3-section  -->
-
-
-<section class="features">
-  <div class="feature-box">
-    <h3>Product Packing</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
   </div>
-
-  <div class="feature-box">
-    <h3>24x7 Support</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-  </div>
-
-  <div class="feature-box">
-    <h3>Delivery in 5 Days</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-  </div>
-
-
 </section>
 
+<!-- 3-bo‘lim -->
+<section class="features">
+  <div class="feature-box">
+    <h3>Mahsulot qadoqlash</h3>
+    <p>Har bir mahsulot sifatli tarzda qadoqlanadi.</p>
+  </div>
 
+  <div class="feature-box">
+    <h3>24/7 Yordam</h3>
+    <p>Istalgan vaqtda biz bilan bog‘lanishingiz mumkin.</p>
+  </div>
 
+  <div class="feature-box">
+    <h3>Yetkazib berish — 5 kunda</h3>
+    <p>Buyurtmalaringiz qisqa muddatda yetkaziladi.</p>
+  </div>
+</section>
 
+<!-- Banner -->
+<div class="banner">
+  <div class="offer-box">
+    <h2>Organik oziq-ovqatlarga ajoyib chegirma!</h2>
+    <p class="text">Har kuni yangi, tabiiy mahsulotlar bilan ta’minlaning.</p>
 
+    <div class="timer">
+      <div><strong>326 :</strong><br><span>Kun</span></div>
+      <div><strong>03 :</strong><br><span>Soat</span></div>
+      <div><strong>08 :</strong><br><span>Daqiqa</span></div>
+      <div><strong>52 :</strong><br><span>Soniya</span></div>
+    </div>
+  </div>
+</div>
 
-    <div class="banner">
-          <div class="offer-box">
-    
-              <h2>Great deal on organic food.</h2>
-              <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                  labore.</p>
+<!-- Fikr-mulohazalar -->
+<section class="testimonials">
+  <h2>Mijozlar fikrlari</h2>
+  <p class="subtitle">
+    Biz haqimizda mijozlarimizning samimiy so‘zlari bilan tanishing.
+  </p>
 
-              <div class="timer">
-                  <div><strong>326  :</strong><br><span>Days</span></div>
-                  <div><strong>03  :</strong><br><span>Hrs</span></div>
-                  <div><strong>08  :</strong><br><span>Min</span></div>
-                  <div><strong>52  : </strong><br><span>Sec</span></div>
-              </div>
-          </div>
+  <div class="testimonials-container">
+    <div class="testimonial-card">
+      <div class="img-box">
+        <img src="img/2.jpg.png" alt="Stephen Smith">
       </div>
+      <p class="position">Hammuassis</p>
+      <h3>Stephen Smith</h3>
+      <p class="quote">“Ajoyib xizmat va lazzatli taomlar! Tavsiya qilaman.”</p>
+    </div>
 
-
-
-            <section class="testimonials">
-    <h2>Great Words From People</h2>
-    <p class="subtitle">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lacus vel facilisis.
-    </p>
-
-    <div class="testimonials-container">
-      <div class="testimonial-card">
-        <div class="img-box">
-          <img src="img/2.jpg.png" alt="Stephen Smith">
-        </div>
-        <p class="position">Co Founder</p>
-        <h3>Stephen Smith</h3>
-        <p class="quote">"eiusmpsu dolor sit amet, conse cte tur ng elit, sed do eiusmod tem lacus vel facilisis."</p>
+    <div class="testimonial-card">
+      <div class="img-box">
+        <img src="img/yeksa.png" alt="Lorem Robinson">
       </div>
+      <p class="position">Menejer</p>
+      <h3>Lorem Robinson</h3>
+      <p class="quote">“Yetkazib berish tez, mahsulotlar esa juda sifatli.”</p>
+    </div>
 
-      <div class="testimonial-card">
-        <div class="img-box">
-          <img src="img/yeksa.png" alt="Lorem Robinson">
-        </div>
-        <p class="position">Manager</p>
-        <h3>Lorem Robinson</h3>
-        <p class="quote">"eiusmpsu dolor sit amet, conse cte tur ng elit, sed do eiusmod tem lacus vel facilisis."</p>
+    <div class="testimonial-card">
+      <div class="img-box">
+        <img src="img/alila.png" alt="Saddika Alard">
       </div>
+      <p class="position">Jamoa yetakchisi</p>
+      <h3>Saddika Alard</h3>
+      <p class="quote">“Foodzy — har doim ishonchli tanlov!”</p>
+    </div>
+  </div>
+</section>
 
-      <div class="testimonial-card">
-        <div class="img-box">
-          <img src="img/alila.png" alt="Saddika Alard">
+<!-- Yangiliklar -->
+<section class="news-section">
+  <h2>So‘nggi yangiliklar</h2>
+  <p>Yangi mahsulotlar, aksiyalar va foydali maslahatlar bilan tanishing.</p>
+
+  <div class="news-container">
+
+    <div class="news-card">
+      <div class="news-image">
+        <img src="img/lakak.png" alt="Food 1">
+        <div class="date-box">
+          <span>10</span>
+          <p>Okt</p>
         </div>
-        <p class="position">Team Leader</p>
-        <h3>Saddika Alard</h3>
-        <p class="quote">"eiusmpsu dolor sit amet, conse cte tur ng elit, sed do eiusmod tem lacus vel facilisis."</p>
+      </div>
+      <div class="news-content">
+        <small>Admin tomonidan | Shirinliklar</small>
+        <h3>Yangi desertlar to‘plami taqdim etildi.</h3>
+        <a href="#">Batafsil o‘qish</a>
       </div>
     </div>
-  </section>
 
+    <div class="news-card">
+      <div class="news-image">
+        <img src="img/div.cr-blog-image.png" alt="Food 2">
+        <div class="date-box">
+          <span>09</span>
+          <p>Sent</p>
+        </div>
+      </div>
+      <div class="news-content">
+        <small>Admin tomonidan | Oziq-ovqat</small>
+        <h3>Organik mahsulotlarni xarid qilish bo‘yicha qo‘llanma.</h3>
+        <a href="#">Batafsil o‘qish</a>
+      </div>
+    </div>
 
+    <div class="news-card">
+      <div class="news-image">
+        <img src="img/klasj.png" alt="Food 3">
+        <div class="date-box">
+          <span>12</span>
+          <p>Okt</p>
+        </div>
+      </div>
+      <div class="news-content">
+        <small>Admin tomonidan | Shirinliklar</small>
+        <h3>Yangi taomlar menyusiga qo‘shildi.</h3>
+        <a href="#">Batafsil o‘qish</a>
+      </div>
+    </div>
 
+  </div>
+</section>
 
-
-
-    
-
-      
-   
-
-
-
-
-
-      
-
-    <section class="news-section">
-              <h2>Latest News</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore
-                  lacus vel facilisis.</p>
-
-              <div class="news-container">
-
-                  <div class="news-card">
-                      <div class="news-image">
-                          <img src="img/lakak.png" alt="Food 1">
-                          <div class="date-box">
-                              <span>10</span>
-                              <p>oct</p>
-                          </div>
-                      </div>
-                      <div class="news-content">
-                          <small>By Admin | Snacks</small>
-                          <h3>Urna pretium elit mauris cursus at elit vestibulum.</h3>
-                          <a href="#">Read More</a>
-                      </div>
-                  </div>
-
-                  <div class="news-card">
-                      <div class="news-image">
-                          <img src="img/div.cr-blog-image.png" alt="Food 2">
-                          <div class="date-box">
-                              <span>09</span>
-                              <p>sep</p>
-                          </div>
-                      </div>
-                      <div class="news-content">
-                          <small>By Admin | Food</small>
-                          <h3>Best guide to Shopping for organic ingredients.</h3>
-                          <a href="#">Read More</a>
-                      </div>
-                  </div>
-
-                  <div class="news-card">
-                      <div class="news-image">
-                          <img src="img/klasj.png" alt="Food 3">
-                          <div class="date-box">
-                              <span>12</span>
-                              <p>oct</p>
-                          </div>
-                      </div>
-                      <div class="news-content">
-                          <small>By Admin | Snacks</small>
-                          <h3>Cursus at elit vestibulum urna pretium elit mauris.</h3>
-                          <a href="#">Read More</a>
-                      </div>
-                  </div>
-
-              </div>
-          </section>
-
-
-
-
-
-
-
-
+<!-- Footer -->
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-col company-info">
@@ -296,48 +252,48 @@
         <img src="img/Page 1 1.png" alt="logo">
         <div>
           <h3>Foodzy</h3>
-          <p class="tagline">A Treasure of Tastes</p>
+          <p class="tagline">Mazalarning xazinasi</p>
         </div>
       </div>
       <p class="desc">
-        FoodTrove is the biggest market of grocery products. <br>
-        Get your daily needs from our store.
+        FoodTrove — eng yirik oziq-ovqat bozori. <br>
+        Kundalik ehtiyojlaringizni bizdan toping.
       </p>
       <ul class="contact">
-        <li><i class="fas fa-map-marker-alt"></i> 51 Green St. Huntington, Ohio Beach, Ontario, NY 11746 KY 4783, USA.</li>
+        <li><i class="fas fa-map-marker-alt"></i> 51 Green St. Huntington, Ohio Beach, Ontario, NY 11746, AQSh</li>
         <li><i class="fas fa-envelope"></i> example@email.com</li>
         <li><i class="fas fa-phone"></i> +91 123 4567890</li>
       </ul>
     </div>
 
     <div class="footer-col">
-      <h4>Company</h4>
+      <h4>Kompaniya</h4>
       <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Delivery Information</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Support Center</a></li>
+        <li><a href="#">Biz haqimizda</a></li>
+        <li><a href="#">Yetkazib berish ma’lumoti</a></li>
+        <li><a href="#">Maxfiylik siyosati</a></li>
+        <li><a href="#">Foydalanish shartlari</a></li>
+        <li><a href="#">Aloqa</a></li>
+        <li><a href="#">Yordam markazi</a></li>
       </ul>
     </div>
 
     <div class="footer-col">
-      <h4>Category</h4>
+      <h4>Kategoriyalar</h4>
       <ul>
-        <li><a href="#">Dairy & Bakery</a></li>
-        <li><a href="#">Fruits & Vegetable</a></li>
-        <li><a href="#">Snack & Spice</a></li>
-        <li><a href="#">Juice & Drinks</a></li>
-        <li><a href="#">Chicken & Meat</a></li>
-        <li><a href="#">Fast Food</a></li>
+        <li><a href="#">Sut va non mahsulotlari</a></li>
+        <li><a href="#">Meva va sabzavotlar</a></li>
+        <li><a href="#">Atirlar va ziravorlar</a></li>
+        <li><a href="#">Sharbat va ichimliklar</a></li>
+        <li><a href="#">Tovuq va go‘sht</a></li>
+        <li><a href="#">Tez tayyor taomlar</a></li>
       </ul>
     </div>
 
     <div class="footer-col subscribe">
-      <h4>Subscribe Our Newsletter</h4>
+      <h4>Yangiliklarga obuna bo‘ling</h4>
       <div class="search-box">
-        <input type="text" placeholder="Search here...">
+        <input type="text" placeholder="Email manzilingizni kiriting...">
         <button><i class="fas fa-paper-plane"></i></button>
       </div>
       <div class="social-icons">
@@ -357,15 +313,9 @@
   </div>
 
   <div class="footer-bottom">
-    <p>© 2025 <span>Foodzy</span>, All rights reserved.</p>
+    <p>© 2025 <span>Foodzy</span>, barcha huquqlar himoyalangan.</p>
   </div>
 </footer>
 
-
-
-
-
-
- </html>
-  
 </body>
+</html>
