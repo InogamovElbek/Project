@@ -4,24 +4,518 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Foodzy - Biz haqimizda</title>
-  <link rel="stylesheet" href="style_3.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <style>
+    /* === RESET === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", Arial, sans-serif;
+    }
+
+    body {
+      background: #f8f8f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* === HEADER === */
+    .header {
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+    }
+
+    .header-top {
+      border-bottom: 1px solid #eee;
+    }
+
+    .container_la {
+      max-width: 1250px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #ff7d00;
+    }
+
+    .logo-text h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .logo-text span {
+      font-size: 12px;
+      color: #777;
+    }
+
+    .menu-btn {
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      color: #222;
+      display: none;
+    }
+
+    .nav-links ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links ul li a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links ul li a:hover {
+      color: #ff7d00;
+    }
+
+    .phone {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: #333;
+      flex-shrink: 0;
+    }
+
+    .phone i {
+      font-size: 16px;
+    }
+
+    .header-bottom {
+      background: #fff;
+      padding: 12px 20px;
+    }
+
+    .bottom-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1250px;
+      margin: 0 auto;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid #d8e3d6;
+      border-radius: 4px;
+      overflow: hidden;
+      flex: 1;
+      max-width: 500px;
+      min-width: 250px;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      padding: 8px 10px;
+      flex: 1;
+      font-size: 14px;
+      min-width: 0;
+    }
+
+    .search-box select {
+      border: none;
+      outline: none;
+      background: #fff;
+      padding: 8px 10px;
+      border-left: 1px solid #d8e3d6;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .search-box button {
+      background: #222;
+      border: none;
+      color: #fff;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .search-box button:hover {
+      background: #000;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-shrink: 0;
+    }
+
+    .icons a {
+      text-decoration: none;
+      color: #222;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .icons a:hover {
+      color: #ff7d00;
+    }
+
+    /* === BREADCRUMB === */
+    .breadcrumb {
+      background: #ff5252;
+      padding: 40px 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .breadcrumb h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .breadcrumb-links {
+      font-size: 14px;
+    }
+
+    .breadcrumb-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .breadcrumb-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* === ABOUT SECTION === */
+    .about-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .about-section h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      color: #666;
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    /* === STATS === */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      margin: 60px 0;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat .number {
+      font-size: 48px;
+      font-weight: 700;
+      color: #ff5252;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .stat .stat-label {
+      font-size: 16px;
+      color: #666;
+      font-weight: 500;
+    }
+
+    /* === FEATURES === */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .feature {
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .feature h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* === FOOTER === */
+    .footer {
+      background: #fafafa;
+      padding: 60px 70px 30px;
+      color: #333;
+      border-top: 1px solid #eee;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 50px;
+      max-width: 1250px;
+      margin: 0 auto;
+    }
+
+    .footer-col {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .company-info .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .company-info .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      background: #ff7d00;
+    }
+
+    .company-info h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .company-info .tagline {
+      font-size: 12px;
+      color: #999;
+    }
+
+    .company-info .contact {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .company-info .contact li {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .company-info .contact i {
+      color: #f75b0b;
+      font-size: 14px;
+      margin-top: 3px;
+    }
+
+    .footer-col h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-col ul li a {
+      text-decoration: none;
+      color: #666;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: #f75b0b;
+    }
+
+    .subscribe .search-box {
+      display: flex;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .subscribe .search-box input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .subscribe .search-box button {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .subscribe .search-box button:hover {
+      background: #333;
+    }
+
+    .subscribe .social-icons {
+      margin: 15px 0;
+    }
+
+    .subscribe .social-icons a {
+      color: #000;
+      font-size: 15px;
+      margin-right: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .subscribe .social-icons a:hover {
+      color: #f75b0b;
+    }
+
+    .subscribe .images {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .subscribe .images img {
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+      background: #ddd;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #eee;
+      margin-top: 40px;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .footer-bottom p {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .footer-bottom span {
+      color: #f75b0b;
+      font-weight: 500;
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 992px) {
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .stats {
+        gap: 40px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .breadcrumb h1 {
+        font-size: 24px;
+      }
+
+      .about-section h2 {
+        font-size: 22px;
+      }
+
+      .stat .number {
+        font-size: 36px;
+      }
+
+      .footer {
+        padding: 40px 20px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Header -->
   <header class="header">
-    <!-- Yuqori Navbar -->
     <div class="header-top">
       <div class="container_la top-container">
         <div class="logo">
           <button class="menu-btn"><i class="fa fa-bars"></i></button>
-          <img src="img/lala.png" alt="Foodzy Logosi" />
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23ff7d00'/%3E%3C/svg%3E" alt="Foodzy Logosi" />
           <div class="logo-text">
             <h2>Foodzy</h2>
-            <span>Ta’mlar xazinasi</span>
+            <span>Ta'mlar xazinasi</span>
           </div>
         </div>
 
@@ -42,7 +536,6 @@
       </div>
     </div>
 
-    <!-- Pastki Header -->
     <div class="header-bottom">
       <div class="container_la bottom-container">
         <div class="search-box">
@@ -60,58 +553,71 @@
         </div>
       </div>
     </div>
-    <!-- Header tugadi -->
   </header>
 
-  <div class="container">
-    <h1>Sabzi haqida</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum, neque vitae rutrum ultricies, lacus quam ultricies nunc, sed blandit augue justo in nisl.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus, mauris ac rutrum semper, quam nulla placerat sem, eu finibus ex urna quis nunc.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec nulla nec ex placerat ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis eu mi mi.</p>
-
-    <div class="stats">
-      <div class="stat">
-        <span class="number">0.1k</span>
-        <span class="stat-label">Yetkazib beruvchilar</span>
-      </div>
-      <div class="stat">
-        <span class="number">23k</span>
-        <span class="stat-label">Mijozlar</span>
-      </div>
-      <div class="stat">
-        <span class="number">2k</span>
-        <span class="stat-label">Mahsulotlar</span>
-      </div>
+  <!-- Breadcrumb -->
+  <section class="breadcrumb">
+    <h1>Biz haqimizda</h1>
+    <div class="breadcrumb-links">
+      <a href="index.html">Bosh sahifa</a> › Biz haqimizda
     </div>
+  </section>
 
-    <div class="features">
-      <div class="feature">
-        <h3>Mahsulot qadoqlash</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="feature">
-        <h3>24/7 Yordam</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="feature">
-        <h3>5 kunda yetkazib berish</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="feature">
-        <h3>Xavfsiz to‘lov</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
+  <!-- About Section -->
+  <section class="about-section">
+    <h2>Sabzi haqida</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum, neque vitae rutrum ultricies, lacus quam ultricies nunc, sed blandit augue justo in nisl. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus, mauris ac rutrum semper, quam nulla placerat sem, eu finibus ex urna quis nunc. Sed euismod, nisl eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nisl eget nisl.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec nulla nec ex placerat ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis eu mi mi. Sed euismod, nisl eget ultricies tincidunt.</p>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat">
+      <span class="number">0.1k</span>
+      <span class="stat-label">Yetkazib beruvchilar</span>
+    </div>
+    <div class="stat">
+      <span class="number">23k</span>
+      <span class="stat-label">Mijozlar</span>
+    </div>
+    <div class="stat">
+      <span class="number">2k</span>
+      <span class="stat-label">Mahsulotlar</span>
     </div>
   </div>
 
+  <!-- Features -->
+  <div class="features">
+    <div class="feature">
+      <h3>Mahsulot qadoqlash</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+    <div class="feature">
+      <h3>24/7 Yordam</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+    <div class="feature">
+      <h3>5 kunda yetkazib berish</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+    <div class="feature">
+      <h3>Xavfsiz to'lov</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-col company-info">
         <div class="logo">
-          <img src="img/Page 1 1.png" alt="logo">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23ff7d00'/%3E%3C/svg%3E" alt="logo">
           <div>
             <h3>Foodzy</h3>
-            <p class="tagline">Ta’mlar xazinasi</p>
+            <p class="tagline">Ta'mlar xazinasi</p>
           </div>
         </div>
         
@@ -126,10 +632,10 @@
         <h4>Kompaniya</h4>
         <ul>
           <li><a href="#">Biz haqimizda</a></li>
-          <li><a href="#">Yetkazib berish ma’lumoti</a></li>
+          <li><a href="#">Yetkazib berish ma'lumoti</a></li>
           <li><a href="#">Maxfiylik siyosati</a></li>
           <li><a href="#">Shartlar va qoidalar</a></li>
-          <li><a href="#">Biz bilan bog‘laning</a></li>
+          <li><a href="#">Biz bilan bog'laning</a></li>
           <li><a href="#">Yordam markazi</a></li>
         </ul>
       </div>
@@ -141,30 +647,34 @@
           <li><a href="#">Meva va sabzavotlar</a></li>
           <li><a href="#">Gazaklar va ziravorlar</a></li>
           <li><a href="#">Sharbat va ichimliklar</a></li>
-          <li><a href="#">Tovuq va go‘sht</a></li>
+          <li><a href="#">Tovuq va go'sht</a></li>
           <li><a href="#">Fastfud</a></li>
         </ul>
       </div>
 
       <div class="footer-col subscribe">
-        <h4>Yangiliklarimizga obuna bo‘ling</h4>
+        <h4>Yangiliklarimizga obuna bo'ling</h4>
         <div class="search-box">
           <input type="text" placeholder="Bu yerda yozing...">
           <button><i class="fas fa-paper-plane"></i></button>
         </div>
         <div class="social-icons">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-dribbble"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
         <div class="images">
-          <img src="img/nkdfjdf.png" alt="">
-          <img src="img/nkdfjdf.png" alt="">
-          <img src="img/nkdfjdf.png" alt="">
-          <img src="img/nkdfjdf.png" alt="">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Crect width='50' height='50' fill='%23ddd'/%3E%3C/svg%3E" alt="">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Crect width='50' height='50' fill='%23ddd'/%3E%3C/svg%3E" alt="">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Crect width='50' height='50' fill='%23ddd'/%3E%3C/svg%3E" alt="">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Crect width='50' height='50' fill='%23ddd'/%3E%3C/svg%3E" alt="">
         </div>
       </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 <span>Foodzy</span>. Barcha huquqlar himoyalangan</p>
     </div>
   </footer>
 </body>
